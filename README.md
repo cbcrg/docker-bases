@@ -1,0 +1,4 @@
+base
+====
+
+Docker base image
