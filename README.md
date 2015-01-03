@@ -6,6 +6,10 @@ Custom Docker image based on Debian Wheezy used as base for other projects image
 
 ## Installed components 
 
+#### 1.1 - 3 Jan 2015
+
+- cpan-install
+
 #### 1.0 - 2 Jan 2015
 
 - bc 

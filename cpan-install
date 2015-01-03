@@ -1,0 +1,8 @@
+#!/bin/bash
+export PERL_MM_USE_DEFAULT=1
+export PERL_EXTUTILS_AUTOINSTALL="--defaultdeps"
+    
+while [ "$*" != "" ]; do
+  perl -MCPAN -e "install $1"
+  shift
+done    
