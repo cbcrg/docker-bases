@@ -10,6 +10,8 @@ RUN apt-get update --fix-missing && \
 RUN wget -q cpanmin.us -O /usr/local/bin/cpanm && \
   chmod +x /usr/local/bin/cpanm   
   
+RUN apt-get install -y procps  
+  
 ADD cpan-install /usr/local/bin/
 
 #
