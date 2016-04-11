@@ -8,7 +8,7 @@ Custom Docker image based on Debian Wheezy used as base for other projects image
 
 #### 1.2 - 15 Mar 2015 
 
-- procps (ps system tool)
+- procps (`ps` system tool)
 
 #### 1.1 - 3 Jan 2015
 
