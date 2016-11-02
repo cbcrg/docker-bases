@@ -1,0 +1,3 @@
+#!/bin/bash
+MOUNT_POINTS='/gpfs/projects /gpfs/scratch /.statelite/tmpfs/gpfs/scratch /.statelite/tmpfs/gpfs/projects'
+source docker2singularity

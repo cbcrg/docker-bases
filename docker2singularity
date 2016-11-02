@@ -1,0 +1,12 @@
+#!/bin/bash
+if [[ ! "$1" ]]; then echo "Missing Docker image name -- Usage: docker2singularity <docker image name> <target singularity image file name>"; exit 1; fi
+if [[ ! "$2" ]]; then echo "Missing Singularity image file name -- Usage: docker2singularity <docker image name> <target singularity image file name>"; exit 1; fi
+MOUNT_POINTS=${MOUNT_POINTS:=''}
+
+docker run \
+ --privileged -t --rm \
+ -e MOUNT_POINTS="$MOUNT_POINTS" \
+ -v /var/run/docker.sock:/var/run/docker.sock \
+ -v $2:/output \
+ pditommaso/docker2singularity \
+ $1
