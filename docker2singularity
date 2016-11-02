@@ -1,4 +1,16 @@
 #!/bin/bash
+#
+# Converts a Docker image to a Singularity container file 
+# 
+# Provide static mount point by using the `MOUNT_POINTS` variable eg. 
+# 
+#   MOUNT_POINTS='/foo/bar /this/that` docker2singularity image/name:latest container.img
+#
+#
+# See also
+#   https://github.com/pditommaso/docker2singularity
+#
+
 if [[ ! "$1" ]]; then echo "Missing Docker image name -- Usage: docker2singularity <docker image name> <target singularity image file name>"; exit 1; fi
 if [[ ! "$2" ]]; then echo "Missing Singularity image file name -- Usage: docker2singularity <docker image name> <target singularity image file name>"; exit 1; fi
 MOUNT_POINTS=${MOUNT_POINTS:=''}
